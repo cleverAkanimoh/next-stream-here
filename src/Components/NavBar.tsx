@@ -1,13 +1,14 @@
-import { useCallback, useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
-import { VscMenu } from "react-icons/vsc";
-import logo from "../assets/images/logo.png";
+'use client'
 
-const NavLinks: string[] = ['about', 'skills', 'projects'];
+import { useCallback, useEffect, useState } from "react";
+import { VscMenu } from "react-icons/vsc";
+import Link from "next/link";
+import { BsChevronUp } from "react-icons/bs";
+import Loading from "./Loading";
+
 
 export const activeStyles = {
     color: "#D2691E",
-    borderBottom: "3px solid #D2691E",
     opacity: 1
 }
 
@@ -15,9 +16,9 @@ export default function NavBar() {
     const [menuClicked, setMenuClicked] = useState(false)
     const [scrolled, setScrolled] = useState(false)
 
-    const toggleMenu = useCallback(() => setMenuClicked(prevState => !prevState), [])
+    const toggleMenu = useCallback(() => setMenuClicked(prevState => !prevState), [menuClicked])
 
-    const onScrolling = useCallback(() => window.scrollY > 60 ? setScrolled(true) : setScrolled(false), [])
+    const onScrolling = useCallback(() => window.scrollY > 60 ? setScrolled(true) : setScrolled(false), [scrolled])
 
     useEffect(() => {
         window.onscroll = onScrolling
@@ -25,29 +26,30 @@ export default function NavBar() {
         return () => window.removeEventListener('scroll', onScrolling)
     }, [])
 
-
-    const renderNavLinks = NavLinks.map((link, i) => (
-        <li key={i} className="nav-list-style">
-            <NavLink onClick={toggleMenu} to={link} className="nav-links-style" style={({ isActive }) => isActive ? activeStyles : undefined}>{link}</NavLink>
-        </li>
-    ))
-
     return (
         <nav className={`nav-style ${scrolled ? 'fixed-nav-style' : ''}`}>
             <div className="nav-div-style">
                 <div className="nav-div-div-style">
-                    <span>
-                        <img src={logo} alt="logo" className="w-[30px] sm:w-[40px] rounded-lg" />
-                        <Link
-                            to="."
-                            onClick={() => setMenuClicked(false)}
-                            className="portfolio-logo-style">Portfolio <span className="portfolio-span-style"></span></Link>
-                    </span>
-                    <button className={`${menuClicked ? "bg-gradient-style" : ""} other-menu-btn-style`} onClick={toggleMenu}>
+                    <div>
+                        <span>S</span>
+                        <h1>StreamHere</h1>
+                    </div>
+
+                    <button className={`${menuClicked ? "" : ""}`} onClick={toggleMenu}>
                         <VscMenu />
                     </button>
                 </div>
-                <ul className={`${menuClicked ? "animate-menu-list-show-style" : "animate-menu-list-hide-style"} other-animate-list-style`}>{renderNavLinks}</ul>
+
+                <ul className={`${``}`}>
+                    <li><Link href='..'>home</Link></li>
+                    <li><Link href='platform'>platform</Link></li>
+                    <li><Link href='features'>features <BsChevronUp /></Link></li>
+                    <li><Link href='blog'>our blog</Link></li>
+                </ul>
+                
+                <Loading />
+
+                <Link href='demo'>demo link</Link>
             </div>
         </nav>
     );
