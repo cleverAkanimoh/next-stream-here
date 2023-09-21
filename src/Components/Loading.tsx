@@ -1,9 +1,15 @@
 import Image from 'next/image'
 import loadingGif from '../../public/images/mona-loading-dark.gif'
+import useTick from '@/Hooks/useTick'
 
-export default () => (
-  <div className="loading-div-style">
-    <Image src={loadingGif} alt="loading..." className='loading-img-style' />
-    <h2 className="loading-h2-style">loading projects...</h2>
-  </div>
-)
+const Loading = () => {
+  const text = useTick(['...'], 2000, 0)
+  return (
+    <div className=" flex flex-col items-center">
+      <Image src={loadingGif} alt="loading" className='w-1/4 h-[150px]' />
+      <h2 className="font-bold text-xl text-brown">Loading{text}</h2>
+    </div>
+  )
+}
+
+export default Loading;

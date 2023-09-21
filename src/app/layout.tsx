@@ -1,12 +1,10 @@
 import NavBar from '@/Components/NavBar'
 import './globals.css'
-import { Inter } from 'next/font/google'
 import Footer from '@/Components/Footer'
 
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'stream here',
+  title: 'Welcome | stream here',
   description: '',
 }
 
@@ -17,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
+      <body className={``}>
         <main>
           <NavBar />
           {children}

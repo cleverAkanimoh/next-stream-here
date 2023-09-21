@@ -1,11 +1,3 @@
-'use client'
-
-type Props = {}
-
-const Footer = (props: Props) => {
-  return (
-    <div>Footer</div>
-  )
-}
+const Footer = () => <div>Footer</div>
 
 export default Footer
