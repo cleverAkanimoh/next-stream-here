@@ -1,26 +1,30 @@
-import NavBar from '@/Components/NavBar'
-import './globals.css'
-import Footer from '@/Components/Footer'
+import { Footer, NavBar } from '@/Components'
 
+import { GlobalContextProvider } from '../context/store'
+
+import './globals.css';
+import { Providers } from '../lib';
 
 export const metadata = {
-  title: 'Welcome | stream here',
-  description: '',
+  title: 'Welcome | Live Stream Here',
+  description: 'sport streaming site in Nigeria',
 }
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode
 }) {
   return (
     <html lang="en">
-      <body className={``}>
-        <main>
-          <NavBar />
-          {children}
-          <Footer />
-        </main>
+      <body className={`w-full`}>
+        <Providers>
+          <GlobalContextProvider>
+            <NavBar />
+            {children}
+            <Footer />
+          </GlobalContextProvider>
+        </Providers>
       </body>
     </html>
   )
