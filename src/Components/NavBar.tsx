@@ -2,7 +2,7 @@
 
 import { VscMenu } from "react-icons/vsc";
 import Link from "next/link";
-import { BsChevronUp } from "react-icons/bs";
+import { BsAlarm, BsBell, BsBook, BsChevronUp, BsGear } from "react-icons/bs";
 import { useGlobalContext } from "@/context/store";
 import React from "react";
 import { companyName } from "@/lib/variables";
@@ -14,8 +14,8 @@ export const activeStyles = {
 }
 
 export default function NavBar() {
-    
-    const {scrolled,setScrolled, isMenuClicked, setIsMenuClicked } = useGlobalContext()
+
+    const { scrolled, setScrolled, isMenuClicked, setIsMenuClicked } = useGlobalContext()
 
     const toggleMenu = React.useCallback(() => setIsMenuClicked((prevState: any) => !prevState), [isMenuClicked])
 
@@ -28,27 +28,30 @@ export default function NavBar() {
     }, [])
 
     return (
-        <nav className={`nav-style ${scrolled ? 'fixed-nav-style' : ''}`}>
-            <div className="nav-div-style">
-                <div className="nav-div-div-style">
+        <nav className={`w-full relative border p-2 shadow ${scrolled ? '' : ''}`}>
+            <div className="flex-all my-2">
+
+                <div className="flex-all w-[86px]">
+
+                    <button className={`${isMenuClicked ? "" : ""}`} onClick={toggleMenu}>
+                        <VscMenu className="text-lg" />
+                    </button>
+
                     <div>
                         <Link href='/'>{companyName}</Link>
                     </div>
 
-                    <button className={`${isMenuClicked ? "" : ""}`} onClick={toggleMenu}>
-                        <VscMenu />
-                    </button>
                 </div>
 
-                <ul className={`${``}`}>
-                    <li><Link href='home'>home</Link></li>
-                    <li><Link href='platform'>platform</Link></li>
-                    <li><Link href='features'>features <BsChevronUp /></Link></li>
-                    <li><Link href='blog'>our blog</Link></li>
-                </ul>
+                <div className="flex-all w-[72px]">
+                    <button><BsGear /></button>
+                    <button><BsBell /></button>
+                    <button>auth</button>
+                </div>
 
-                <Link href='demo'>demo link</Link>
             </div>
+
+
         </nav>
     );
 }

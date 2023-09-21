@@ -6,4 +6,7 @@
     html {
         @apply scroll-smooth
     }
+    .flex-all {
+        @apply flex justify-between items-center flex-shrink
+    }
 }
