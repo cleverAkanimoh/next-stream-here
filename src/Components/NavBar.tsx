@@ -32,7 +32,6 @@ export default function NavBar() {
             <div className="nav-div-style">
                 <div className="nav-div-div-style">
                     <div>
-                        <span>S</span>
                         <Link href='/'>{companyName}</Link>
                     </div>
 
