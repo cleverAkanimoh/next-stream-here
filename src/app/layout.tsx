@@ -1,9 +1,9 @@
 import { Footer, NavBar } from '@/Components'
 
 import { GlobalContextProvider } from '../context/store'
+import { Providers } from '../lib';
 
 import './globals.css';
-import { Providers } from '../lib';
 
 export const metadata = {
   title: 'Welcome | Live Stream Here',

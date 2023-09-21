@@ -1,1 +1,3 @@
-export const companyName = 'inyene'
+const companyName = 'streamify'
+
+export {companyName}
