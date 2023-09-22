@@ -4,6 +4,7 @@ import { GlobalContextProvider } from '../context/store'
 import { Providers } from '../lib';
 
 import './globals.css';
+import SideNav from '@/Components/SideNav';
 
 export const metadata = {
   title: 'Welcome | Live Stream Here',
@@ -21,7 +22,9 @@ export default function RootLayout({
         <Providers>
           <GlobalContextProvider>
             <NavBar />
-            {children}
+            <main className='min-h-screen flex px-2'>
+              <SideNav className='' />
+            {children}</main>
             <Footer />
           </GlobalContextProvider>
         </Providers>

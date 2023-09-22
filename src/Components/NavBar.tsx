@@ -28,7 +28,7 @@ export default function NavBar() {
     }, [])
 
     return (
-        <nav className={`w-full relative border p-2 shadow ${scrolled ? '' : ''}`}>
+        <nav className={`w-full sticky border p-2 ${scrolled ? 'fixed top-0 left-0' : ''}`}>
             <div className="flex-all my-2">
 
                 <div className="flex-all w-[86px]">

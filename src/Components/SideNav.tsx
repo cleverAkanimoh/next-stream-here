@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import { BsAlarm, BsChevronUp, BsBook } from 'react-icons/bs'
 
+// type SideNavProp = {prop: React.ComponentProps}
+
 export default function SideNav() {
     return (
         <ul className={`${``}`}>
