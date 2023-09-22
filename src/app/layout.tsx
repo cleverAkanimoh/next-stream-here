@@ -22,9 +22,9 @@ export default function RootLayout({
         <Providers>
           <GlobalContextProvider>
             <NavBar />
-            <main className='min-h-screen flex px-2'>
-              <SideNav className='' />
-            {children}</main>
+            <main className='min-h-screen flex'>
+              <SideNav />
+              {children}</main>
             <Footer />
           </GlobalContextProvider>
         </Providers>

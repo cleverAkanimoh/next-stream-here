@@ -1,8 +1,8 @@
 'use client'
 
-import { VscMenu } from "react-icons/vsc";
+import { VscClose, VscMenu } from "react-icons/vsc";
 import Link from "next/link";
-import { BsAlarm, BsBell, BsBook, BsChevronUp, BsGear } from "react-icons/bs";
+import { BsBell } from "react-icons/bs";
 import { useGlobalContext } from "@/context/store";
 import React from "react";
 import { companyName } from "@/lib/variables";
@@ -28,13 +28,13 @@ export default function NavBar() {
     }, [])
 
     return (
-        <nav className={`w-full sticky border p-2 ${scrolled ? 'fixed top-0 left-0' : ''}`}>
+        <nav className={`w-full sticky border p-2 ${scrolled ? 'fixed top-0 left-0 bg-white' : ''}`}>
             <div className="flex-all my-2">
 
                 <div className="flex-all w-[86px]">
 
-                    <button className={`${isMenuClicked ? "" : ""}`} onClick={toggleMenu}>
-                        <VscMenu className="text-lg" />
+                    <button className="text-lg" onClick={toggleMenu}>
+                        {isMenuClicked ? <VscClose /> : <VscMenu />}
                     </button>
 
                     <div>
@@ -43,10 +43,11 @@ export default function NavBar() {
 
                 </div>
 
-                <div className="flex-all w-[72px]">
-                    <button><BsGear /></button>
-                    <button><BsBell /></button>
+                <div className="flex-all w-[56px]">
+
+                    <button ><BsBell /></button>
                     <button>auth</button>
+
                 </div>
 
             </div>

@@ -1,15 +1,18 @@
 import Link from 'next/link'
-import { BsAlarm, BsChevronUp, BsBook } from 'react-icons/bs'
-
-// type SideNavProp = {prop: React.ComponentProps}
+import { BsAlarm, BsChevronUp, BsBook, BsGear } from 'react-icons/bs'
 
 export default function SideNav() {
     return (
-        <ul className={`${``}`}>
-            <li><BsAlarm /> <Link href='live'>live</Link></li>
-            <li><Link href='features'>features <BsChevronUp /></Link></li>
-            <li><Link href='sport'>sport <BsChevronUp /></Link></li>
-            <li><BsBook /> <Link href='blog'>blog</Link></li>
-        </ul>
+        <div className={`${``} relative min-h-screen border -z-10`}>
+
+            <ul>
+                <li><BsAlarm /> <Link href='live'>live</Link></li>
+                <li><Link href='features'>features <BsChevronUp /></Link></li>
+                <li><Link href='sport'>sport <BsChevronUp /></Link></li>
+                <li><BsBook /> <Link href='blog'>blog</Link></li>
+
+            </ul>
+            <button><BsGear /></button>
+        </div>
     )
 }
