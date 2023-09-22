@@ -1,12 +1,13 @@
 'use client'
 
-import { VscClose, VscMenu } from "react-icons/vsc";
+import React from "react";
+
 import Link from "next/link";
+
+import { VscClose, VscMenu } from "react-icons/vsc";
 import { BsBell } from "react-icons/bs";
 import { useGlobalContext } from "@/context/store";
-import React from "react";
 import { companyName } from "@/lib/variables";
-
 
 export const activeStyles = {
     color: "#D2691E",
