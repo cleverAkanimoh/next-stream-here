@@ -1,4 +1,4 @@
 const companyName = 'streamify'
-const color = 'black'
+const textColor = 'rgb(4 120 87)'
 
-export {companyName, color}
+export {companyName, textColor}
