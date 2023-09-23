@@ -1,12 +1,17 @@
 'use client'
 
-type Props = {
+type ErrorProps = {
     error: Error;
-    reset: () => void
+    reset: () => void;
 }
 
-export default function error({ error, reset }: Props) {
+export default function error({ error, reset }: ErrorProps) {
     return (
-        <div>error</div>
+        <div>
+            <span>{error.name}</span>
+            <span>{error?.message || 'Error message undefined'}</span>
+
+            <button onClick={reset} >Try again</button>
+        </div>
     )
 }

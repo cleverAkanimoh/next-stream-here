@@ -44,7 +44,7 @@ export default function NavBar() {
 
                 </div>
 
-                <div className="flex-all w-[56px]">
+                <div className="flex-all w-[54px]">
 
                     <button ><BsBell /></button>
                     <button>auth</button>
