@@ -4,7 +4,7 @@ import Image from 'next/image'
 import loadingGif from '../../public/images/mona-loading-dark.gif'
 import useTick from '@/Hooks/useTick'
 
-const Loading = () => {
+export default function Loading() {
   const text = useTick(['...'], 2000, 0)
   return (
     <div className=" flex flex-col items-center">
@@ -13,5 +13,3 @@ const Loading = () => {
     </div>
   )
 }
-
-export default Loading;
