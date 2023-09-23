@@ -7,7 +7,7 @@ import useTick from '@/Hooks/useTick'
 export default function Loading() {
   const text = useTick(['...'], 2000, 0)
   return (
-    <div className=" flex flex-col items-center">
+    <div className="flex flex-col items-center">
       <Image src={loadingGif} alt="loading" className='w-1/4 h-[150px]' />
       <h2 className="font-bold text-xl text-brown">Loading{text}</h2>
     </div>
