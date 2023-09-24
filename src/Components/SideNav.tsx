@@ -9,7 +9,7 @@ export default function SideNav() {
     const { isMenuClicked } = useGlobalContext()
 
     return (
-        <div className={`${isMenuClicked ? 'translate-x-0 w-1/2 shadow fixed top-[50px]' : '-translate-x-full w-0'} bg-white transition-all duration-300 min-h-screen overflow-hidden border`}>
+        <div className={`${isMenuClicked ? 'translate-x-0 w-1/2 shadow fixed top-[49px]' : '-translate-x-full w-0'} bg-white transition-all duration-300 min-h-screen overflow-hidden border-r`}>
 
             <div className='p-2'>
 
