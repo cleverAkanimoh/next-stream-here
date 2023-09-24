@@ -35,9 +35,9 @@ export default function NavBar() {
 
                 <div className="flex-all gap-3 sm:gap-5">
 
-                    <button className="sm2:hidden" onClick={toggleMenu}>
+                    <Tooltip label={`${isMenuClicked ? "close" : "menu"}`} letterSpacing={1}><button className="sm2:hidden" onClick={toggleMenu}>
                         {isMenuClicked ? <VscClose /> : <VscMenu />}
-                    </button>
+                    </button></Tooltip>
 
                     <div>
                         <Tooltip label={`${companyName}`} letterSpacing={3}>
