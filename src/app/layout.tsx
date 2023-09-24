@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`w-full dark:bg-emerald-700 dark:text-white`}>
+      <body className={`w-full font-serif dark:bg-emerald-700 dark:text-white`}>
         <Providers>
           <GlobalContextProvider>
             <NavBar />
