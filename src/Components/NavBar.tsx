@@ -50,10 +50,10 @@ export default function NavBar() {
                 <div className="flex-all gap-4 sm:gap-5 lg:mr-4">
                     <span className="flex items-center gap-2 rounded sm:rounded-tr-xl p-2 text-sm dark:bg-emerald-700"><label htmlFor="search"><BsSearch /></label><input className="border-0 outline-0  bg-transparent w-[90px] sm:w-[180px] " id="search" placeholder="search" /></span>
 
-                    <Tooltip label="notification" bgColor="emerald.900">
+                    <Tooltip label="notification" letterSpacing={1}>
                         <button className="hover:bg-emerald-700 rounded-full sm:p-2"><BsBell className="text-lg" /></button></Tooltip>
 
-                    <Tooltip label="profile" bgColor="emerald.900">
+                    <Tooltip label="profile" letterSpacing={1}>
                         <button className="hover:bg-emerald-700 rounded-full sm:p-2"><BsPersonAdd className="text-lg" /></button></Tooltip>
 
                 </div>

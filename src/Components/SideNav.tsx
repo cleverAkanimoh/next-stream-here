@@ -17,6 +17,7 @@ export default function SideNav() {
                     <li><BsAlarm /> <Link href='live' className='sm2:group-hover:flex'>live</Link></li>
                     <li><BsChevronUp /> <Link href='features' className='sm2:group-hover:flex'>features </Link></li>
                     <li><BsChevronUp /> <Link href='sport' className='sm2:group-hover:flex'>sport </Link></li>
+                    <li><BsChevronUp /> <Link href='movies' className='sm2:group-hover:flex'>movie/tv </Link></li>
                     <li><BsBook /> <Link href='blog' className='sm2:group-hover:flex'>blog</Link></li>
                 </ul>
 
