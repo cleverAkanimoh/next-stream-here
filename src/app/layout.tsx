@@ -1,10 +1,10 @@
-import { Footer, NavBar } from '@/Components'
+import { Footer, NavBar } from '@/components'
 
 import { GlobalContextProvider } from '../context/store'
 import { Providers } from '../lib';
 
 import './globals.css';
-import SideNav from '@/Components/SideNav';
+import SideNav from '@/components/SideNav';
 
 export const metadata = {
   title: 'Welcome | Live Stream Here',

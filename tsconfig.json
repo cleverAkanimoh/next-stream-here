@@ -34,7 +34,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "next.config.js"  ],
+, "next.config.js", "src/components/GoogleTranslate.jsx"  ],
   "exclude": [
     "node_modules"
   ]
