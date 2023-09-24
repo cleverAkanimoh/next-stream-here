@@ -3,13 +3,33 @@
 @tailwind utilities;
 
 @layer components {
-    html {
-        @apply scroll-smooth
-    }
-    .flex-all {
-        @apply flex justify-between items-center flex-shrink
-    }
-    .sideNav-Ul li {
-        @apply flex gap-2 items-center my-6
-    }
+  html {
+    @apply scroll-smooth;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-[2px];
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-emerald-800;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-emerald-300;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-emerald-700;
+  }
+
+  .flex-all {
+    @apply flex justify-between items-center flex-shrink;
+  }
+  .sideNav-Ul li {
+    @apply flex gap-2 items-center my-6;
+  }
 }
