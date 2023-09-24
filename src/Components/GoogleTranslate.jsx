@@ -23,12 +23,12 @@ export default function GoogleTranslate() {
     window.googleTranslateElementInit = googleTranslateElementInit;
   }, []);
 
-  const googleTranslateElementInit = () => {
+  function googleTranslateElementInit() {
     new window.google.translate.TranslateElement(
       {
         pageLanguage: "auto",
-        autoDisplay: false,
-        includedLanguages: "ru,en,pl", // If you remove it, by default all google supported language will be included
+        // autoDisplay: false,
+        // includedLanguages: "ru,en,pl", // If you remove it, by default all google supported language will be included
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
       },
       "google_translate_element"
@@ -41,7 +41,7 @@ export default function GoogleTranslate() {
     setSelected("/auto/en");
   }
 
-  const langChange = (e, m, evt) => {
+  const langChange = (e, evt) => {
     evt.preventDefault();
     if (hasCookie("googtrans")) {
       setCookie("googtrans", decodeURI(e));
@@ -64,6 +64,7 @@ export default function GoogleTranslate() {
           zIndex: -99999,
         }}
       ></div>
+      
       <SelectPicker
         data={languages}
         style={{ width: 100 }}
@@ -73,8 +74,8 @@ export default function GoogleTranslate() {
         searchable={false}
         className={"notranslate"}
         menuClassName={"notranslate"}
-        onSelect={(e, m, evt) => langChange(e, m, evt)}
-        placeholder="Lang"
+        onSelect={(e, evt) => langChange(e, evt)}
+        placeholder="select Language"
       />
     </>
   );

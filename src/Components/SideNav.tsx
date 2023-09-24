@@ -21,6 +21,8 @@ export default function SideNav() {
                 </ul>
 
                 <button><BsGear /></button>
+                {/* <GoogleTranslate /> */}
+                
             </div>
         </div>
     )
