@@ -30,6 +30,6 @@
     @apply flex justify-between items-center flex-shrink;
   }
   .sideNav-Ul li {
-    @apply flex gap-2 items-center my-6;
+    @apply flex gap-2 sm:gap-4 sm:text-lg items-center my-6 sm:my-8;
   }
 }
