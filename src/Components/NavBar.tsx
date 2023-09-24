@@ -29,7 +29,7 @@ export default function NavBar() {
     }, [])
 
     return (
-        <nav className={`w-full sticky py-2 px-4 z-50 dark:bg-emerald-900 ${scrolled ? 'fixed top-0 left-0' : ''}`}>
+        <nav className={`w-full sticky py-2 px-4 z-50 dark:bg-emerald-900 ${scrolled ? '' : ''} fixed top-0 left-0`}>
             <div className="flex-all my-2">
 
                 <div className="flex-all w-[86px]">
@@ -45,7 +45,7 @@ export default function NavBar() {
                 </div>
 
                 <div className="flex-all gap-4">
-                    <span><input className="border-emerald-500 outline-0 rounded w-[100px] px-2 text-sm dark:bg-emerald-700"  placeholder="search"/></span>
+                    <span><input className="border-0 outline-0 rounded w-[100px] p-2 text-sm dark:bg-emerald-700"  placeholder="search"/></span>
                     <button ><BsBell /></button>
                     <button>auth</button>
 
