@@ -8,6 +8,7 @@ import { VscClose, VscMenu } from "react-icons/vsc";
 import { BsBell } from "react-icons/bs";
 import { useGlobalContext } from "@/context/store";
 import { companyName } from "@/lib/variables";
+import { Input } from "rsuite";
 
 export const activeStyles = {
     color: "#D2691E",
@@ -29,7 +30,7 @@ export default function NavBar() {
     }, [])
 
     return (
-        <nav className={`w-full sticky border p-2 ${scrolled ? 'fixed top-0 left-0 bg-white' : ''}`}>
+        <nav className={`w-full sticky border py-2 px-4 ${scrolled ? 'fixed top-0 left-0 bg-white' : ''}`}>
             <div className="flex-all my-2">
 
                 <div className="flex-all w-[86px]">
@@ -44,7 +45,8 @@ export default function NavBar() {
 
                 </div>
 
-                <div className="flex-all w-[54px]">
+                <div className="flex-all ">
+                    <span><input className="border rounded w-[50px] "  placeholder="search"/></span>
                     <button ><BsBell /></button>
                     <button>auth</button>
 

@@ -13,7 +13,7 @@ export default function SideNav() {
 
             <div className='p-2'>
 
-                <ul className='sideNav-Ul'>
+                <ul className='sideNav-Ul '>
                     <li><BsAlarm /> <Link href='live'>live</Link></li>
                     <li><BsChevronUp /> <Link href='features'>features </Link></li>
                     <li><BsChevronUp /> <Link href='sport'>sport </Link></li>
