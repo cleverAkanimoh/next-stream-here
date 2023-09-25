@@ -24,7 +24,7 @@ export default function RootLayout({
             <NavBar />
             <main className='min-h-screen flex'>
               <SideNav />
-              {children}
+              <section className='m-4 p-2 w-full'>{children}</section>
             </main>
             <Footer />
           </GlobalContextProvider>
