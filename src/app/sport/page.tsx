@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function Live() {
+function Sports() {
   return (
     <div>
-      Demoooo live
+      Sportttt
     </div>
   )
 }
+
+export default Sports

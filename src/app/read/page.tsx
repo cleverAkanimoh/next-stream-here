@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function Live() {
+function Blog() {
   return (
     <div>
-      Demoooo live
+      Blog post
     </div>
   )
 }
+
+export default Blog

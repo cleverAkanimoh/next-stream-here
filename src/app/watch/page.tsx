@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function Live() {
+function Watch() {
   return (
     <div>
-      Demoooo live
+      movies here
     </div>
   )
 }
+
+export default Watch

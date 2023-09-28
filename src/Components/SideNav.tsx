@@ -16,10 +16,10 @@ export default function SideNav() {
 
                 <ul className='sideNav-Ul '>
                     <li><BsAlarm /> <Link href='live' className='sm2:group-hover:flex'>live</Link></li>
-                    <li><BsMusicPlayer /> <Link href='music' className='sm2:group-hover:flex'>music </Link></li>
+                    <li><BsMusicPlayer /> <Link href='listen' className='sm2:group-hover:flex'>music </Link></li>
                     <li><BsDatabase /> <Link href='sport' className='sm2:group-hover:flex'>sport </Link></li>
-                    <li><BsCameraVideo /> <Link href='movies' className='sm2:group-hover:flex'>movie/tv </Link></li>
-                    <li><BsBook /> <Link href='blog' className='sm2:group-hover:flex'>blog</Link></li>
+                    <li><BsCameraVideo /> <Link href='watch' className='sm2:group-hover:flex'>movie/tv </Link></li>
+                    <li><BsBook /> <Link href='read' className='sm2:group-hover:flex'>blog</Link></li>
                 </ul>
 
                 <Tooltip label="setting" letterSpacing={1} placement='right'><button className='border ml-2 text-lg '><BsGear /></button></Tooltip>
