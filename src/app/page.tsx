@@ -5,7 +5,7 @@ import { companyName } from "@/lib/variables";
 
 export default function Homepage() {
 
-  let text = useTick(['entertaining... ', 'creative. ', 'awesome. '], 3000, 500)
+  let text = useTick(['entertaining. ', 'creative. ', 'awesome. '], 3000, 500)
 
   return <article className="font-sans">
 
