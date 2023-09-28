@@ -27,8 +27,8 @@ export default function GoogleTranslate() {
     new window.google.translate.TranslateElement(
       {
         pageLanguage: "auto",
-        // autoDisplay: false,
-        // includedLanguages: "ru,en,pl", // If you remove it, by default all google supported language will be included
+        autoDisplay: false,
+        includedLanguages: "ru,en,pl", // If you remove it, by default all google supported language will be included
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
       },
       "google_translate_element"
