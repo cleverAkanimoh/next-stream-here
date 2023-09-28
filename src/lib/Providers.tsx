@@ -4,7 +4,7 @@
 import { CacheProvider } from '@chakra-ui/next-js'
 import { ChakraProvider } from '@chakra-ui/react'
 
-export function Providers({ 
+export default function Providers({ 
     children 
   }: { 
   children: React.ReactNode 
