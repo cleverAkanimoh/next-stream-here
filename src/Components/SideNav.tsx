@@ -22,7 +22,7 @@ export default function SideNav() {
                     <li><BsBook /> <Link href='blog' className='sm2:group-hover:flex'>blog</Link></li>
                 </ul>
 
-               <Tooltip label="setting" letterSpacing={1} placement='right'><button className='border ml-2 text-lg '><BsGear /></button></Tooltip>
+                <Tooltip label="setting" letterSpacing={1} placement='right'><button className='border ml-2 text-lg '><BsGear /></button></Tooltip>
                 {/* <GoogleTranslate /> */}
 
             </div>

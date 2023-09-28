@@ -48,8 +48,12 @@ export default function NavBar() {
                 </div>
 
                 <div className="flex-all gap-2 sm:gap-5 lg:mr-4">
-                
-                    <span className="flex items-center gap-2 rounded sm:rounded-tr-xl p-2 text-sm dark:bg-emerald-700"><label htmlFor="search"><BsSearch /></label><input className="border-0 outline-0 bg-emerald-700 w-[70px] sm:w-[180px] " id="search" placeholder="search" /></span>
+
+                    <form className="flex items-center gap-2 rounded sm:rounded-tr-xl p-2 text-sm dark:bg-emerald-700">
+                        <label htmlFor="search"><BsSearch /></label>
+
+                        <input className="border-0 outline-0 bg-emerald-700 w-[70px] sm:w-[180px] " id="search" placeholder="search" />
+                    </form>
 
                     <Tooltip label="notification" letterSpacing={1}>
                         <button className="hover:bg-emerald-700 rounded-full p-2 transition-all duration-300"><BsBell className="text-lg" /></button></Tooltip>
