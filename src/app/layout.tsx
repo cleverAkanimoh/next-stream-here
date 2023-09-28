@@ -1,7 +1,7 @@
 import { Footer, NavBar, SideNav } from '@/components'
 
-import { GlobalContextProvider } from '../context/store'
-import { Providers } from '../lib';
+import { GlobalContextProvider } from '@/context/store'
+import { Providers } from '@/lib';
 
 import './globals.css';
 
