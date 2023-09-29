@@ -5,11 +5,11 @@ import React from "react";
 import Link from "next/link";
 
 import { VscClose, VscMenu } from "react-icons/vsc";
-import { BsBell, BsGear, BsPersonAdd, BsSearch } from "react-icons/bs";
+import { BsBell, BsGear, BsPersonAdd } from "react-icons/bs";
 import { useGlobalContext } from "@/context/store";
 import { companyName } from "@/lib/variables";
 import { Tooltip } from "@chakra-ui/react";
-import { searchAction } from "@/lib";
+import Search from "./Search";
 
 export const activeStyles = {
     color: "#D2691E",
@@ -48,11 +48,7 @@ export default function NavBar() {
 
                 </div>
 
-                <form action={searchAction} className="flex items-center gap-2 rounded sm:rounded-tr-xl p-2 text-sm bg-emerald-700">
-                    <label htmlFor="search"><BsSearch /></label>
-
-                    <input className="border-0 outline-0 bg-emerald-700 w-[40px] sm:w-[120px] md:w-[180px] sm2:focus:w-[200px] transition-all duration-300" id="search" placeholder="search" />
-                </form>
+                <Search />
 
                 <div className="flex-all gap-2 sm:gap-5 lg:mr-4">
 

@@ -1,3 +1,3 @@
 export { default as Providers } from "./Providers";
-export { default as searchAction } from "./searchAction";
+export { companyName, dtextColor, dsbgColor, dpbgColor } from './variables'
 // export { prisma } from "./db";
