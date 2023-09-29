@@ -6,11 +6,16 @@ import { BsSearch } from 'react-icons/bs'
 
 export default function Search() {
     const [keyword, setKeyword] = React.useState('')
+    const router = useRouter()
 
-    function searchFn() {
-        const router = useRouter()
+    function searchFn(e: React.FormEvent<HTMLFormElement>) {
+        e.preventDefault();
 
-        router.push(`/?keyword=${keyword}`)
+        if (keyword) {
+            router.push(`/?query=${keyword}`)
+        } else {
+            router.push(`/`)
+        }
     }
     return <form
         className="flex items-center gap-2 rounded sm:rounded-tr-xl p-2 text-sm bg-emerald-700"

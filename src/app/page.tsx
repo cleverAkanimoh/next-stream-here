@@ -3,7 +3,11 @@
 import useTick from "@/Hooks/useTick";
 import { companyName } from "@/lib/variables";
 
-export default function Homepage() {
+type HomePageProps = {
+  searchParams: [key: string] | string | string[] | undefined
+}
+
+export default function Homepage(searchParams: HomePageProps) {
 
   let text = useTick(['entertaining. ', 'creative. ', 'awesome. '], 3000, 500)
 
