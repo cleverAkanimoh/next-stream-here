@@ -1,11 +1,11 @@
-import { Footer, NavBar, SideNav } from '@/components'
-
-import { GlobalContextProvider } from '@/context/store'
+import { Footer, NavBar, SideNav } from '@/components';
+import GlobalContextProvider from '@/context/store';
 import { Providers } from '@/lib';
 
 import './globals.css';
+import { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Welcome | Live Stream Here',
   description: 'sport streaming site in Nigeria',
 }
@@ -17,15 +17,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`w-full font-serif dark:bg-emerald-700 dark:text-white`}>
+      <body className={`w-full h-screen overflow-hidden font-serif bg-emerald-700 text-white transition-color duration-300`}>
         <Providers>
           <GlobalContextProvider>
             <NavBar />
-            <main className='min-h-screen flex'>
+            <main className='flex items-center sm2:py-2 h-[92vh] sm2:h-[87.5vh]'>
               <SideNav />
-              <section className='m-4 p-2 w-full'>{children}</section>
+              <div className='gap-2 sm2:my-4 sm2:px-2 w-full h-full overflow-auto'>
+                <section className='min-h-[80%]'>{children}</section>
+                <Footer />
+              </div>
             </main>
-            <Footer />
           </GlobalContextProvider>
         </Providers>
       </body>

@@ -32,7 +32,7 @@
     @apply flex justify-between items-center flex-shrink;
   }
   .sideNav-Ul li {
-    @apply flex gap-2 sm:gap-4 sm:text-lg items-center my-6 hover:text-emerald-50 hover:bg-emerald-700 hover:rounded-xl p-2 transition-all duration-300;
+    @apply flex gap-2 sm:gap-4 sm2:gap-2 items-center my-6 hover:text-emerald-50 hover:bg-emerald-700 hover:rounded-xl p-2 transition-all duration-300;
   }
   .sideNav-Ul li a {
     @apply flex-1 sm2:hidden lg:flex;
