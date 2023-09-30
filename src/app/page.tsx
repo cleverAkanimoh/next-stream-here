@@ -1,6 +1,7 @@
 'use client'
 
 import useTick from "@/Hooks/useTick";
+import { PaginationControl } from "@/components";
 import { data } from "@/lib";
 import { companyName } from "@/lib/variables";
 import { useSearchParams } from "next/navigation";
@@ -13,11 +14,8 @@ export default function Homepage({ searchParams }: {
   const searchQuery = useSearchParams()
   let text = useTick(['entertaining. ', 'creative. ', 'awesome. '], 3000, 500)
 
-  // console.log(searchParams);
-  console.log(searchQuery.get('query')?.valueOf());
-
   const page = searchParams['page'] ?? '1'
-  const per_page = searchParams['per_page'] ?? '5'
+  const per_page = searchParams['per_page'] ?? '4'
 
   const startPage = (Number(page) - 1) * Number(per_page)
   const endPage = startPage + Number(per_page)
@@ -41,5 +39,6 @@ export default function Homepage({ searchParams }: {
         </div>)
       }
     </div>
+    <PaginationControl />
   </article>
 }

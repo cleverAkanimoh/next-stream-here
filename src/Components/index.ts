@@ -3,4 +3,4 @@ export { default as GoogleTranslate } from "./GoogleTranslate";
 export { default as NavBar } from "./NavBar";
 export { default as SideNav } from "./SideNav";
 export { default as Search } from "./Search";
-export { default as Pagination } from "./Pagination";
+export { default as PaginationControl } from "./PaginationControl";
