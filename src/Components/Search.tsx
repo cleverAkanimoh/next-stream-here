@@ -13,6 +13,7 @@ export default function Search() {
 
         if (keyword) {
             router.push(`/?query=${keyword}`)
+            setKeyword('')
         } else {
             router.push(`/`)
         }
