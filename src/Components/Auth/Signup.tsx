@@ -1,5 +1,4 @@
 import React from "react";
-import signupAction from "./actions/signupAction";
 import { useGlobalContext } from "@/context/store";
 import { Spinner } from "@chakra-ui/react";
 
@@ -11,12 +10,12 @@ export default function Signup() {
 	const [error, setError] = React.useState(false);
 
 	const [User, setUser] = React.useState({
-		firstname: '',
+		name: '',
 		lastname: '',
 		email: '',
 		category: '',
-		passcode: '',
-		confirmPasscode: ''
+		password: '',
+		confirmPassword: ''
 	});
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -32,20 +31,23 @@ export default function Signup() {
 
 		setSubmiting(true)
 
-		if (User.passcode !== User.confirmPasscode) {
+		if (User.password !== User.confirmPassword) {
 			setError(true)
 			setSubmiting(false)
 			return;
 		}
 
 		try {
-			await signupAction(User)
+			const { data } = await axios.post("/api/register", { name: User.name, email: User.email, password: User.password })
 			
+			console.log(data);
+			
+
 			setSubmiting(false)
 			setLoginBtn(true)
-			
+
 		} catch (err) {
-			console.log('Log: please check your internet connection')
+			console.log('error message: please check your internet connection')
 			setSubmiting(false)
 		} finally {
 			setSubmiting(false)
@@ -62,12 +64,12 @@ export default function Signup() {
 
 			<form onSubmit={handleSubmit} method="post" className="signup-form">
 				<input
-					name="firstname"
+					name="name"
 					type="text"
-					placeholder="First Name"
+					placeholder="Name"
 					className="signup-input rounded-tl-[6px]"
 					required
-					value={User.firstname}
+					value={User.name}
 					onChange={handleChange}
 				/>
 
@@ -79,6 +81,7 @@ export default function Signup() {
 					required
 					value={User.lastname}
 					onChange={handleChange}
+					disabled
 				/>
 
 				<input
@@ -104,6 +107,7 @@ export default function Signup() {
 								id="landlord"
 								value="landlord"
 								onChange={handleChange}
+								disabled
 							/>&nbsp;
 
 							<label className="category-label" htmlFor="landlord">Landlord</label>
@@ -118,6 +122,7 @@ export default function Signup() {
 								id="agent"
 								value="agent"
 								onChange={handleChange}
+								disabled
 
 							/>&nbsp;
 
@@ -134,6 +139,7 @@ export default function Signup() {
 								value="client"
 								onChange={handleChange}
 								defaultChecked
+								disabled
 							/>&nbsp;
 
 							<label className="category-label" htmlFor="client">Client</label>
@@ -144,22 +150,22 @@ export default function Signup() {
 				</aside>
 
 				<input
-					name="passcode"
+					name="password"
 					type="password"
 					placeholder="Password"
 					className="signup-input rounded-bl-[6px]"
 					required
-					value={User.passcode}
+					value={User.password}
 					onChange={handleChange}
 				/>
 
 				<input
-					name="confirmPasscode"
+					name="confirmPassword"
 					type="password"
 					placeholder="Confirm Password"
 					className="signup-input rounded-br-[6px] border-l-0"
 					required
-					value={User.confirmPasscode}
+					value={User.confirmPassword}
 					onChange={handleChange}
 				/>
 

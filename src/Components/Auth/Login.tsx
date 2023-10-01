@@ -80,7 +80,7 @@ export default function Login() {
         />
 
         <button className={`${submitting ? "bg-opacity-40 cursor-not-allowed pointer-events-none" : ""} hover:bg-opacity-50`}>
-          {submitting ? <Spinner /> : "log in"}
+          {submitting ? "logging in " + <Spinner /> : "log in"}
         </button>
       </form>
 
