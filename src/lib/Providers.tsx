@@ -4,7 +4,6 @@
 import { CacheProvider } from '@chakra-ui/next-js'
 import { ChakraProvider } from '@chakra-ui/react'
 import GlobalContextProvider from '@/context/store'
-import { ClerkProvider } from '@clerk/nextjs'
 
 export default function Providers({
   children
@@ -12,7 +11,6 @@ export default function Providers({
   children: React.ReactNode
 }) {
   return (
-    <ClerkProvider>
       <CacheProvider>
         <ChakraProvider>
           <GlobalContextProvider>
@@ -20,6 +18,5 @@ export default function Providers({
           </GlobalContextProvider>
         </ChakraProvider>
       </CacheProvider>
-    </ClerkProvider>
   )
 }

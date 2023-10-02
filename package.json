@@ -15,7 +15,6 @@
         "@emotion/react": "latest",
         "@emotion/styled": "latest",
         "cookies-next": "latest",
-        "dotenv": "^16.3.1",
         "framer-motion": "latest",
         "next": "latest",
         "react": "latest",
