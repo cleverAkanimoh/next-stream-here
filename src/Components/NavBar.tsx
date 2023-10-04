@@ -3,7 +3,7 @@
 import React from "react";
 
 import Link from "next/link";
-
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { VscClose, VscMenu } from "react-icons/vsc";
 import { BsBell, BsGear, BsPersonAdd } from "react-icons/bs";
 import { useGlobalContext } from "@/context/store";
@@ -61,7 +61,7 @@ export default function NavBar() {
                     </Tooltip>
 
                     <Tooltip label="user" letterSpacing={1}>
-                        <button className="hover:bg-emerald-700 hover:rounded-full p-2 text-lg transition-all duration-300"><BsPersonAdd /></button>
+                        <button className="hover:bg-emerald-700 hover:rounded-full p-2 text-lg transition-all duration-300"><UserButton /></button>
                     </Tooltip>
 
                 </div>
